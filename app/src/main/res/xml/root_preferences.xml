@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="User Settings">
+
+        <SwitchPreferenceCompat
+            app:key="location_services"
+            app:title="Show my location in Google Maps"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="store_email"
+            android:title="Store email in the database" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Projects Settings">
+
+        <SwitchPreferenceCompat
+            app:key="project_deadlines"
+            app:title="Remind me before deadlines" />
+
+        <ListPreference
+            app:dependency="project_deadlines"
+            app:defaultValue="reply"
+            app:entries="@array/project_deadlines_entries"
+            app:entryValues="@array/project_deadlines_values"
+            app:key="deadline"
+            app:summaryOff="Reminders not activated"
+            app:summaryOn="Reminders activated"
+            app:title="Choose when to be reminded"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="General Settings">
+
+        <SwitchPreferenceCompat
+            app:key="dark_mode"
+            app:title="Dark Mode"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

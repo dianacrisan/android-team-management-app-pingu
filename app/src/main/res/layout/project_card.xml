@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:id="@+id/projectName"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:text="@string/project_name"
+        android:textColor="@color/black"
+        android:layout_marginEnd="20dp"
+        android:maxLines="1"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/projectPic"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/projectName"
+        app:tint="#808080"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_recycler_view_deadline"/>
+
+    <TextView
+        android:id="@+id/projectDeadline"
+        android:layout_toEndOf="@+id/projectPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/projectName"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="@string/may_23_2020"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/activitiesPic"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/projectDeadline"
+        app:tint="#808080"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/ic_recycler_view_activities"/>
+
+    <TextView
+        android:id="@+id/activities"
+        android:layout_toEndOf="@+id/activitiesPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/projectDeadline"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/activities"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="#808080"/>
+
+
+</RelativeLayout>

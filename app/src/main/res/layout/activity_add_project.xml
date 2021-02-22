@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProjectActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/relativeLayoutProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvProjectData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/project_data"/>
+
+        <EditText
+            android:layout_below="@id/tvProjectData"
+            android:layout_width="236dp"
+            android:id="@+id/editProjectName"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:hint="@string/project_name"/>
+
+        <Button
+            android:layout_below="@id/editProjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/date"
+            android:id="@+id/btnChooseDeadline" />
+
+        <EditText
+            android:layout_below="@id/editProjectName"
+            android:id="@+id/editProjectDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/project_deadline"
+            android:layout_toRightOf="@id/btnChooseDeadline"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutActivities"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayoutProject">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvActivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_activity"/>
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvActivities">
+
+            <EditText
+                android:layout_below="@id/tvActivities"
+                android:id="@+id/editActivityName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_name" />
+
+            <EditText
+                android:id="@+id/editUserID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0,1,2,3,4,5,6,7,8,9"
+                android:hint="@string/user_id" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/linear1"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/linear2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/difficulty" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_marginTop="5dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDifficulty" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear2"
+            android:layout_centerHorizontal="true"
+            android:text="@string/add_activity"
+            android:id="@+id/btnAddActivity"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvList"
+        android:layout_below="@id/relativeLayoutActivities"
+        android:text="@string/the_activities"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <ListView
+        android:id="@+id/lvActivities"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvList"
+        android:layout_above="@id/layoutButtons"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnReturnToProjectGrid"
+            android:text="@string/ok"
+            android:onClick="returnToProjectsGrid"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancel"
+            android:layout_marginStart="10dp"
+            android:text="@string/cancel"
+            android:onClick="cancel"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

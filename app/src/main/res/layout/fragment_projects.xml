@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.projects.ProjectsFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvProjects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/hello" />
+
+        <GridView
+            android:id="@+id/gvProjects"
+            android:columnWidth="100dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvProjects"
+            android:layout_above="@id/btnAddProject"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:verticalSpacing="20dp"
+            android:horizontalSpacing="20dp"/>
+
+        <Button
+            android:id="@+id/btnAddProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/add_project"/>
+
+        <Button
+            android:id="@+id/btnSaveReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/btnAddProject"
+            android:text="@string/save_report"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
